@@ -98,6 +98,27 @@ For more detailed results and images, check [Interpretation of Disease Evidence 
 ### Pretrained models
 #### DeFI-GAN - deformation field
 
+<style>
+table th:nth-of-type(3) {
+    width: 170px;
+}
+table th:nth-of-type(4) {
+    width: 170px;
+}
+table th:nth-of-type(5) {
+    width: 170px;
+}
+table th:nth-of-type(6) {
+    width: 170px;
+}
+table th:nth-of-type(7) {
+    width: 170px;
+}
+table th:nth-of-type(8) {
+    width: 170px;
+}
+</style>
+
 Dataset | NCC | <div style="width:170px">Input image (<img src="https://render.githubusercontent.com/render/math?math=x">)</div> |  <div style="width:170px">Desired change (<img src="https://render.githubusercontent.com/render/math?math=\Delta x">)</div>  |  <div style="width:170px">Deformation Field (<img src="https://render.githubusercontent.com/render/math?math=\phi">)</div> | <div style="width:170px">Produced change (<img src="https://render.githubusercontent.com/render/math?math=\widehat{\Delta x}">)</div> | <div style="width:170px"><img src="https://render.githubusercontent.com/render/math?math=\widehat{\Delta x}"> over <img src="https://render.githubusercontent.com/render/math?math=x"></div>| <div style="width:170px">Modified image (<img src="https://render.githubusercontent.com/render/math?math=\hat{x}_0">)</div>
 --- | --- | --- | --- | --- | --- | --- | ---
 Toy | 0.710 | ![](https://github.com/ricbl/defigan/raw/master/readme_images/flow/toy/x1.png)  |  ![](https://github.com/ricbl/defigan/raw/master/readme_images/flow/toy/difference_gt.png)  | ![](https://github.com/ricbl/defigan/raw/master/readme_images/flow/toy/flow_quiver.png)  | ![](https://github.com/ricbl/defigan/raw/master/readme_images/flow/toy/difference.png) | ![](https://github.com/ricbl/defigan/raw/master/readme_images/flow/toy/difference_overlaid.png) | ![](https://github.com/ricbl/defigan/raw/master/readme_images/flow/toy/xhat0.png)
@@ -165,7 +186,7 @@ Steps to organize the ADNI data like used in the DeFI-GAN paper:
               |      |       └───ADNI_941_S_4377_MR_MT1__GradWarp__N3m_Br_20120106140231171_S135356_I275760.nii
               |      └─── ...
               └─── ...
-  `"
+  ```
   * `N4_executable`: location of `N4BiasFieldCorrection`. You have to [install it](https://github.com/ANTsX/ANTs/wiki/Compiling-ANTs-on-Linux-and-Mac-OS) if it is not yet installed on your computer.
   * `robex_executable`: location of `runROBEX.sh`. You have to [install it](https://www.nitrc.org/frs/?group_id=622) if it is not yet installed on your computer.
   * if not already on your computer, [FSL should be installed](https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FslInstallation) and its bin folder included in the system path.
