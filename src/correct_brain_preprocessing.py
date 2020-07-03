@@ -16,7 +16,7 @@ import os
 n_processes = 63
 processes = []
 
-bmicdatasets_root = '~/ADNI/Processed_part_2/'
+Processed_part_2_folder = '~/ADNI/Processed_part_2/'
 
 #expects all the volumes to reprocess to be in a folder named Processed_part_2/ADNI_all_no_PP_3/rid_<id>,
 #where id is the patient ADNI id.
