@@ -98,38 +98,17 @@ For more detailed results and images, check [Interpretation of Disease Evidence 
 ### Pretrained models
 #### DeFI-GAN - deformation field
 
-<style>
-table th:nth-of-type(3) {
-    width: 170px;
-}
-table th:nth-of-type(4) {
-    width: 170px;
-}
-table th:nth-of-type(5) {
-    width: 170px;
-}
-table th:nth-of-type(6) {
-    width: 170px;
-}
-table th:nth-of-type(7) {
-    width: 170px;
-}
-table th:nth-of-type(8) {
-    width: 170px;
-}
-</style>
-
-Dataset | NCC | <div style="width:170px">Input image (<img src="https://render.githubusercontent.com/render/math?math=x">)</div> |  <div style="width:170px">Desired change (<img src="https://render.githubusercontent.com/render/math?math=\Delta x">)</div>  |  <div style="width:170px">Deformation Field (<img src="https://render.githubusercontent.com/render/math?math=\phi">)</div> | <div style="width:170px">Produced change (<img src="https://render.githubusercontent.com/render/math?math=\widehat{\Delta x}">)</div> | <div style="width:170px"><img src="https://render.githubusercontent.com/render/math?math=\widehat{\Delta x}"> over <img src="https://render.githubusercontent.com/render/math?math=x"></div>| <div style="width:170px">Modified image (<img src="https://render.githubusercontent.com/render/math?math=\hat{x}_0">)</div>
+Dataset | NCC | Input image (<img src="https://render.githubusercontent.com/render/math?math=x">) | Desired change (<img src="https://render.githubusercontent.com/render/math?math=\Delta x">)  |  Deformation Field (<img src="https://render.githubusercontent.com/render/math?math=\phi">) | Produced change (<img src="https://render.githubusercontent.com/render/math?math=\widehat{\Delta x}">) | <img src="https://render.githubusercontent.com/render/math?math=\widehat{\Delta x}"> over <img src="https://render.githubusercontent.com/render/math?math=x">| Modified image (<img src="https://render.githubusercontent.com/render/math?math=\hat{x}_0">)
 --- | --- | --- | --- | --- | --- | --- | ---
-Toy | 0.710 | ![](https://github.com/ricbl/defigan/raw/master/readme_images/flow/toy/x1.png)  |  ![](https://github.com/ricbl/defigan/raw/master/readme_images/flow/toy/difference_gt.png)  | ![](https://github.com/ricbl/defigan/raw/master/readme_images/flow/toy/flow_quiver.png)  | ![](https://github.com/ricbl/defigan/raw/master/readme_images/flow/toy/difference.png) | ![](https://github.com/ricbl/defigan/raw/master/readme_images/flow/toy/difference_overlaid.png) | ![](https://github.com/ricbl/defigan/raw/master/readme_images/flow/toy/xhat0.png)
-ADNI (coronal view) | 0.369 | ![](https://github.com/ricbl/defigan/raw/master/readme_images/flow/adni/x1.png)  |  ![](https://github.com/ricbl/defigan/raw/master/readme_images/flow/adni/difference_gt.png)  | ![](https://github.com/ricbl/defigan/raw/master/readme_images/flow/adni/flow_quiver.png)  | ![](https://github.com/ricbl/defigan/raw/master/readme_images/flow/adni/difference.png) | ![](https://github.com/ricbl/defigan/raw/master/readme_images/flow/adni/difference_overlaid.png) | ![](https://github.com/ricbl/defigan/raw/master/readme_images/flow/adni/xhat0.png)
+Toy | 0.710 | <img width="170px" src="https://github.com/ricbl/defigan/raw/master/readme_images/flow/toy/x1.png">   |  <img width="170px" src="https://github.com/ricbl/defigan/raw/master/readme_images/flow/toy/difference_gt.png">   | <img width="170px" src="https://github.com/ricbl/defigan/raw/master/readme_images/flow/toy/flow_quiver.png">   | <img width="170px" src="https://github.com/ricbl/defigan/raw/master/readme_images/flow/toy/difference.png">  | <img width="170px" src="https://github.com/ricbl/defigan/raw/master/readme_images/flow/toy/difference_overlaid.png">  | <img width="170px" src="https://github.com/ricbl/defigan/raw/master/readme_images/flow/toy/xhat0.png"> 
+ADNI (coronal view) | 0.369 | <img width="170px" src="https://github.com/ricbl/defigan/raw/master/readme_images/flow/adni/x1.png">   |  <img width="170px" src="https://github.com/ricbl/defigan/raw/master/readme_images/flow/adni/difference_gt.png">   | <img width="170px" src="https://github.com/ricbl/defigan/raw/master/readme_images/flow/adni/flow_quiver.png">   | <img width="170px" src="https://github.com/ricbl/defigan/raw/master/readme_images/flow/adni/difference.png">  | <img width="170px" src="https://github.com/ricbl/defigan/raw/master/readme_images/flow/adni/difference_overlaid.png">  | <img width="170px" src="https://github.com/ricbl/defigan/raw/master/readme_images/flow/adni/xhat0.png"> 
 
 #### Baseline (VA-GAN - addition)
 
-Dataset | NCC | <div style="width:170px">Input image (<img src="https://render.githubusercontent.com/render/math?math=x">)</div> |  <div style="width:170px">Desired change (<img src="https://render.githubusercontent.com/render/math?math=\Delta x">)</div>  | <div style="width:170px">Produced change (<img src="https://render.githubusercontent.com/render/math?math=\widehat{\Delta x}">)</div> | <div style="width:170px"><img src="https://render.githubusercontent.com/render/math?math=\widehat{\Delta x}"> over <img src="https://render.githubusercontent.com/render/math?math=x"></div>| <div style="width:170px">Modified image (<img src="https://render.githubusercontent.com/render/math?math=\hat{x}_0">)</div>
+Dataset | NCC | Input image (<img src="https://render.githubusercontent.com/render/math?math=x">) |  Desired change (<img src="https://render.githubusercontent.com/render/math?math=\Delta x">)  | Produced change (<img src="https://render.githubusercontent.com/render/math?math=\widehat{\Delta x}">) | <img src="https://render.githubusercontent.com/render/math?math=\widehat{\Delta x}"> over <img src="https://render.githubusercontent.com/render/math?math=x">| Modified image (<img src="https://render.githubusercontent.com/render/math?math=\hat{x}_0">)
 --- | --- | --- | --- | --- |  --- | ---
-Toy | 0.532 | ![](https://github.com/ricbl/defigan/raw/master/readme_images/add/toy/x1.png)  |  ![](https://github.com/ricbl/defigan/raw/master/readme_images/add/toy/difference_gt.png)   | ![](https://github.com/ricbl/defigan/raw/master/readme_images/add/toy/difference.png) | ![](https://github.com/ricbl/defigan/raw/master/readme_images/add/toy/difference_overlaid.png) | ![](https://github.com/ricbl/defigan/raw/master/readme_images/add/toy/xhat0.png)
-ADNI (coronal view) | 0.348 |  ![](https://github.com/ricbl/defigan/raw/master/readme_images/add/adni/x1.png)  |  ![](https://github.com/ricbl/defigan/raw/master/readme_images/add/adni/difference_gt.png)  | ![](https://github.com/ricbl/defigan/raw/master/readme_images/add/adni/difference.png) | ![](https://github.com/ricbl/defigan/raw/master/readme_images/add/adni/difference_overlaid.png) | ![](https://github.com/ricbl/defigan/raw/master/readme_images/add/adni/xhat0.png)
+Toy | 0.532 | <img width="170px" src="https://github.com/ricbl/defigan/raw/master/readme_images/add/toy/x1.png">   |  <img width="170px" src="https://github.com/ricbl/defigan/raw/master/readme_images/add/toy/difference_gt.png">    | <img width="170px" src="https://github.com/ricbl/defigan/raw/master/readme_images/add/toy/difference.png">  | <img width="170px" src="https://github.com/ricbl/defigan/raw/master/readme_images/add/toy/difference_overlaid.png">  | <img width="170px" src="https://github.com/ricbl/defigan/raw/master/readme_images/add/toy/xhat0.png"> 
+ADNI (coronal view) | 0.348 |  <img width="170px" src="https://github.com/ricbl/defigan/raw/master/readme_images/add/adni/x1.png">   |  <img width="170px" src="https://github.com/ricbl/defigan/raw/master/readme_images/add/adni/difference_gt.png">   | <img width="170px" src="https://github.com/ricbl/defigan/raw/master/readme_images/add/adni/difference.png">  | <img width="170px" src="https://github.com/ricbl/defigan/raw/master/readme_images/add/adni/difference_overlaid.png">  | <img width="170px" src="https://github.com/ricbl/defigan/raw/master/readme_images/add/adni/xhat0.png"> 
 
 
 ## Outputs
