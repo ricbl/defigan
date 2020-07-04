@@ -9,11 +9,20 @@ The COPD dataset used in the paper is private and is not available for outside i
 
 ## Setup
 
-To install all the needed libraries, you can use the `requirements.sh` file. It assumes you have [conda or miniconda](https://docs.conda.io/en/latest/) installed and creates a conda environment called `defigan`, with prerequisites installed. Activate the environment before running the code using `conda activate defigan`. For running the method for the ADNI dataset, install the SimpleITK library following [these instructions](https://simpleelastix.readthedocs.io/GettingStarted.html). After compiling it, make sure you have the conda environment `defigan` activated when following the instructions in the SimpleITK Python module installation section. The compilation may take a couple hours, but SimpleITK is not necessary for playing with the toy dataset. For details on how to set up the ADNI dataset, go to the "ADNI data setup" section at the end of this README.
+* To install all the needed libraries, you can use the `requirements.sh` file. It assumes you have [conda or miniconda](https://docs.conda.io/en/latest/) installed and creates a conda environment called `defigan`, with prerequisites installed. Activate the environment before running the code using `conda activate defigan`. 
+* For running the method for the ADNI dataset, install the SimpleITK library following [these instructions](https://simpleelastix.readthedocs.io/GettingStarted.html). After compiling it, make sure you have the conda environment `defigan` activated when following the instructions in the SimpleITK Python module installation section. The compilation may take a couple hours, but SimpleITK is not necessary for playing with the toy dataset. 
+* For details on how to set up the ADNI dataset, go to the "ADNI data setup" section at the end of this README.
 
 ## Usage
 
-This section provides command-line commands to should use to train and test the proposed method, DeFI-GAN, and the baseline, VA-GAN. To reproduce the image provided in Results, run the "Test pre-trained model" commands. All commands are selecting the GPU indexed by 0, but you can change the argument `gpus`  according to your needs. For the test commands, replace the `<timestamps-id>` expression with the respective value of the training experiment folder. You can run `python -m src.train --help` to see all available options for modifying the runs. All commands should be run from the project base folder. To check test NCC scores, open the log.txt file inside the experiment folder (`./runs/...`). The first time a dataset is used, H5 files are created for faster loading of datasets in subsequent runs, so the first run may take an unusually long time to start producing outputs.
+This section provides command-line commands to should use to train and test the proposed method, DeFI-GAN, and the baseline, VA-GAN. A few details:
+* To reproduce the image provided in Results, run the "Test pre-trained model" commands. 
+* All commands are selecting the GPU indexed by 0, but you can change the argument `gpus`  according to your needs. 
+* For the test commands, replace the `<timestamps-id>` expression with the respective value of the training experiment folder. 
+* You can run `python -m src.train --help` to see all available options for modifying the runs. 
+* All commands should be run from the project base folder. 
+* To check test NCC scores, open the log.txt file inside the experiment folder (`./runs/...`). 
+* The first time a dataset is used, H5 files are created for faster loading of datasets in subsequent runs, so the first run may take an unusually long time to start producing outputs.
 
 ### Toy dataset
 
@@ -82,8 +91,8 @@ Test pretrained model:
 `python -m src.vagan_tensorflow.test_pretrained_vagan_tensorflow --gpus=0 --experiment=my_adni_test_pretrained_add --ADNI_images_location=<ADNI data location> --load_checkpoint_g=./pretrained_models/brain_add/model_best_ncc --split_validation=test --batch_size=4 --n_dimensions_data=3`
 
 To run the baseline for this dataset, you will need a GPU with at least 11 GB of memory. The difference in memory usage between methods for this dataset comes mainly from the framework (PyTorch vs. Tensorflow) and the inference batch size during training (4 vs. 2). For the Tensorflow VA-GAN implementation, the effective batch size in terms of gradient step is 12, since it uses gradient accumulation of 6 training inferences for each gradient step. Other differences in the Tensorflow implementation include: 
-* using $\hat{x}_{0} = \tanh(x_1+G(x_1))$, in place of $\hat{x}_{0} = x_1+G(x_1)$;
-* a learning rate of $1\mathrm{e}{-3}$.
+* using <img src="https://render.githubusercontent.com/render/math?math=\hat{x}_{0} = \tanh(x_1%2BG(x_1))">, in place of <img src="https://render.githubusercontent.com/render/math?math=\hat{x}_{0} = x_1\%2BG(x_1)">;
+* a learning rate of &nbsp;<img src="https://render.githubusercontent.com/render/math?math=1\mathrm{e}{-3}">.
 
 ## Results
 For the toy dataset, DeFI-GAN gets an NCC of ~0.7 in the validation set, while VA-GAN gets an NCC of ~0.5. We did not perform hyperparameter optimization, and these results are just for illustration purposes. For the other datasets, expected results are in the table below:

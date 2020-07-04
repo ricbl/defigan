@@ -40,7 +40,7 @@ def get_opt(args_from_code = None):
         help='Multiplier for the gradient penalty on the critic, L_{RegD}.')  
     parser.add_argument('--batch_size', type=int, nargs='?', default=8,
         help='Batch size for training and validation')
-    parser.add_argument('--folder_dataset', type=str, nargs='?', default='./',
+    parser.add_argument('--folder_dataset', type=str, nargs='?', default='./h5_files/',
         help='If you want to load/save toy dataset files in a folder other than the local folder, change this variable.')
     parser.add_argument('--save_folder', type=str, nargs='?', default='./runs',
         help='If you want to save files and outputs in a folder other than \'./runs\', change this variable.')

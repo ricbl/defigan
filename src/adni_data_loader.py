@@ -82,13 +82,13 @@ def prepare_data(input_folder, output_file, size, target_resolution, labels_list
     #train_and_val_rids, test_rids, train_and_val_diagnoses, _ = train_test_split(rids, diagnoses, test_size=0.2, stratify=diagnoses)
     #train_rids, val_rids = train_test_split(train_and_val_rids, test_size=0.2, stratify=train_and_val_diagnoses)
 
-    with open('train_rids.csv', 'r') as f:
+    with open('./adni_rids/train_rids.csv', 'r') as f:
       reader = csv.reader(f)
       train_rids = [int(element) for line in list(reader) for element in line if int(element) in rids]
-    with open('test_rids.csv', 'r') as f:
+    with open('./adni_rids/test_rids.csv', 'r') as f:
       reader = csv.reader(f)
       test_rids = [int(element) for line in list(reader) for element in line if int(element) in rids]
-    with open('val_rids.csv', 'r') as f:
+    with open('./adni_rids/val_rids.csv', 'r') as f:
       reader = csv.reader(f)
       val_rids = [int(element) for line in list(reader) for element in line if int(element) in rids]
 
