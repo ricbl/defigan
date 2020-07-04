@@ -186,4 +186,4 @@ Steps to organize the ADNI data like used in the DeFI-GAN paper:
 
 This project is licensed under the GNU General Public License v3.0. Some of the files in this repository have code snippets originated from files licensed with MIT License.
 
-By: Ricardo Bigolin Lanfredi, [ricbl@sci.utah.edu](mailto:ricbl@sci.utah.edu). 
+By: Ricardo Bigolin Lanfredi, [ricbl@sci.utah.edu](mailto:ricbl@sci.utah.edu), [ricbl.github.io](ricbl.github.io). 
